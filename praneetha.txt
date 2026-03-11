@@ -28,5 +28,3 @@ Phase 4: Conflict Handling and Comparison
 4. git switch branch1
 5. git push origin branch1
 6. git diff main
-
-Anything wrong here?
