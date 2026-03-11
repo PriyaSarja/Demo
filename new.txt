@@ -1,1 +1,149 @@
-New File
+# Clone repository
+git clone https://github.com/PriyaSarja/Demo.git
+
+# Go inside folder
+cd Demo
+
+# Configure git
+git config --global user.name "PriyaSarja"
+git config --global user.email "your_email@gmail.com"
+
+# Check status
+git status
+
+# Create file
+touch demo.txt
+
+# Check status again
+git status
+
+# Add file to staging
+git add demo.txt
+
+# Commit changes
+git commit -m "first commit"
+
+# Push to GitHub
+git push origin main
+
+# Check commit history
+git log
+git log --oneline
+
+# Edit file then check difference
+nano demo.txt
+git diff
+
+# Create new branch
+git branch feature
+
+# Switch branch
+git switch feature
+
+# Modify file and commit
+git add demo.txt
+git commit -m "feature branch change"
+
+# Fetch updates
+git fetch origin
+
+# Pull updates
+git pull origin main
+
+# Switch to main branch
+git switch main
+
+# Merge branch
+git merge feature
+
+# If merge conflict occurs edit file then
+git add demo.txt
+git commit -m "resolved merge conflict"
+
+# Reset last commit
+git reset --soft HEAD~1
+
+# Hard reset
+git reset --hard HEAD~1
+
+# Push branch for pull request
+git push origin feature
+
+1. Push branch → git push origin feature
+2. Open repository on GitHub
+3. Click "Compare & Pull Request"
+4. Click "Create Pull Request"
+5. Click "Merge Pull Request"
+
+
+
+# Clone repository
+git clone https://github.com/PriyaSarja/Demo.git
+
+# Go to repository folder
+cd Demo
+
+# Configure git
+git config --global user.name "PriyaSarja"
+git config --global user.email "your_email@gmail.com"
+
+# Check status
+git status
+
+# Create file
+touch demo.txt
+
+# Add and commit
+git add demo.txt
+git commit -m "initial commit"
+git push origin main
+
+# Edit file in main branch
+nano demo.txt
+# type: Hello from MAIN branch
+git add demo.txt
+git commit -m "main change"
+
+# Create new branch
+git branch feature
+
+# Switch to feature branch
+git switch feature
+
+# Edit same line in feature branch
+nano demo.txt
+# type: Hello from FEATURE branch
+git add demo.txt
+git commit -m "feature change"
+
+# Switch back to main
+git switch main
+
+# Merge feature branch (conflict will raise)
+git merge feature
+
+# Open file and resolve conflict
+nano demo.txt
+
+# remove:
+# <<<<<<< HEAD
+# Hello from MAIN branch
+# =======
+# Hello from FEATURE branch
+# >>>>>>> feature
+
+# keep final line like:
+# Hello from MAIN and FEATURE branch
+
+# Mark resolved
+git add demo.txt
+
+# Commit resolved conflict
+git commit -m "resolved merge conflict"
+
+# Push final code
+git push origin main
+
+git merge feature
+
+edit file → git add → git commit
